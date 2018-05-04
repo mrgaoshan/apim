@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Internet Home Page</title>
+    <style>
+        body{margin:0; padding:0; text-align:center;}
+        .bg0{background:#FFFFFF; }
+        .bg1{background:#1b3f9c; text-align:center; min-height: 580px}
+        .bg2{background:#213d52; text-align:center;}
+    </style>
+</head>
+<body>
+
+<div class="bg0">
+    <img th:src="@{images/header.png}"/>
+</div>
+
+<div class="bg1" th:style="'background:url(' + @{images/content2.png} + '); width:100%;height:100%;background-size:cover;background-repeat:no-repeat;'" onclick="">
+    <div style="position: relative;text-align: left;padding-top: 61px;padding-left: 155px">
+        <input type="button" value="" onclick="toIndex()" style="height: 180px;width: 190px;border-radius: 18%;background: transparent;border: none;outline:none;cursor:pointer">
+    </div>
+</div>
+
+<div class="bg2"><img th:src="@{images/footer.png}"/></div>
+
+<script>
+    function toIndex(){
+
+        window.location.href="/toIndex";
+    }
+</script>
+</body>
+</html>
